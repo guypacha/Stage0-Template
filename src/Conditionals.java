@@ -14,7 +14,6 @@ class Drivetrain {
         System.out.println(throttleInfo);
     }
 }
-
 Drivetrain drivetrain = new Drivetrain();
 
 void main() {
@@ -24,29 +23,54 @@ void main() {
     // shooter motors. Then print the value of `shooterVelocity`. After running,
     // change `shooterEnabled` to `true` and re-run; the code should now print 1.
     boolean shooterEnabled = false;
+    int shooterVelocity = 0;
+if(shooterEnabled == true){
 
+    shooterVelocity = 1;
+}
+else{
+
+    shooterVelocity = 0;
+}
+System.out.println(shooterVelocity);
 
     // Print "Success!" if `statusCode` is equal to 0. Otherwise, if `statusCode`
     // is NOT EQUAL to 1, print "User exited code." Else, print "There was an error."
     // After running, change `statusCode` to 0, then 2; the code should print
     // "Success!" and "User exited code." respectively.
-    int statusCode = 1;
-
+    int statusCode = 2;
+    if(statusCode == 0)
+    System.out.println("Success");
+    else if(statusCode != 1){
+        System.out.println("User exited code");
+    }
+    else{
+        System.out.println("there was an eror");
+    }
 
     // If `input` is greater than or equal to 5, print "Controller input detected."
     // Otherwise, print "Discarding input." and set `input` to 0. Then, below the conditional
     // statement, call `drivetrain.setThrottle()`, passing in the variable `input`.
     // After running the code, change `input` to 2; the code should now print
     // "Discarding input."
-    int input = 20;
-
+    int input = 2;
+    if (input >= 5) {
+    System.out.println("Controller input detected");
+    }
+    else{
+        System.out.println("discarding input.");
+        input = 0;
+    }
+    drivetrain.setThrottle(input);
 
     // If the value of `shooterAngleDeg` exceeds 75 degrees OR is less than 10 degrees,
     // print "The shooter has been stopped." Otherwise, print "The shooter is moving."
     // After running, change `shooterAngleDeg` to 76; the code should now print
     // "The shooter has been stopped."
     int shooterAngleDeg = 54;
-
+if (shooterAngleDeg > ) {
+    
+}
 
     // Define a variable `intakeEnabled` whose value is the inverse of `intakeDisabled`,
     // using logical operators. Then print the value of `intakeEnabled`.
